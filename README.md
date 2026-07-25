@@ -1,1 +1,2 @@
-# vaness.github.io
+# vanessmensah.github.io
+Welcome to my portfolio
