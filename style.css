@@ -1,0 +1,889 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+    scroll-behavior:smooth;
+}
+
+
+body {
+
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+
+}
+
+
+/* ===============================
+   BACKGROUND ANIMATION
+================================ */
+
+
+.background {
+
+position:fixed;
+width:100%;
+height:100%;
+z-index:-2;
+
+
+background:
+
+radial-gradient(circle at 20% 20%,
+rgba(0,220,255,0.18),
+transparent 35%),
+
+
+radial-gradient(circle at 80% 70%,
+rgba(140,80,255,0.18),
+transparent 35%),
+
+
+#050816;
+
+
+animation:
+backgroundMove 15s infinite alternate;
+
+}
+
+
+
+@keyframes backgroundMove {
+
+from {
+transform:scale(1);
+}
+
+to {
+transform:scale(1.15);
+}
+
+}
+
+
+
+/* ===============================
+ NAVIGATION
+================================ */
+
+
+nav {
+
+position:fixed;
+
+top:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+
+width:90%;
+
+max-width:1100px;
+
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+
+padding:18px 30px;
+
+
+background:
+rgba(255,255,255,0.08);
+
+
+backdrop-filter:
+blur(15px);
+
+
+border:
+1px solid rgba(255,255,255,.15);
+
+
+border-radius:50px;
+
+
+z-index:100;
+
+}
+
+
+
+nav h2 {
+
+font-size:28px;
+
+background:
+linear-gradient(
+90deg,#00eaff,#9b7bff
+);
+
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+nav a {
+
+color:white;
+
+text-decoration:none;
+
+margin-left:25px;
+
+opacity:.8;
+
+transition:.3s;
+
+}
+
+
+
+nav a:hover {
+
+opacity:1;
+
+color:#00eaff;
+
+}
+
+
+
+
+
+/* ===============================
+ HERO SECTION
+================================ */
+
+
+.hero {
+
+
+min-height:100vh;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+gap:80px;
+
+
+padding:120px 10%;
+
+
+}
+
+
+
+.hero-text {
+
+max-width:650px;
+
+}
+
+
+
+.tag {
+
+
+color:#00eaff;
+
+letter-spacing:3px;
+
+font-size:14px;
+
+}
+
+
+
+.hero h1 {
+
+
+font-size:80px;
+
+
+line-height:1;
+
+
+background:
+linear-gradient(
+90deg,
+#ffffff,
+#00eaff
+);
+
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+
+}
+
+
+
+.hero h2 {
+
+
+font-size:35px;
+
+margin:25px 0;
+
+
+}
+
+
+.hero p {
+
+
+font-size:18px;
+
+line-height:1.7;
+
+color:#c7d2fe;
+
+}
+
+
+
+
+
+/* ===============================
+ BUTTONS
+================================ */
+
+
+.buttons {
+
+margin-top:40px;
+
+display:flex;
+
+gap:20px;
+
+}
+
+
+
+.btn {
+
+
+padding:15px 35px;
+
+border-radius:50px;
+
+background:
+linear-gradient(
+90deg,
+#00eaff,
+#6c63ff
+);
+
+
+color:white;
+
+text-decoration:none;
+
+
+transition:.4s;
+
+
+}
+
+
+.btn:hover {
+
+transform:
+translateY(-8px)
+scale(1.05);
+
+
+box-shadow:
+0 0 30px #00eaff;
+
+}
+
+
+
+.outline {
+
+background:transparent;
+
+border:
+1px solid #00eaff;
+
+}
+
+
+
+
+
+/* ===============================
+ FLOATING SKILL CARD
+================================ */
+
+
+.floating-card {
+
+
+display:grid;
+
+gap:20px;
+
+
+}
+
+
+
+.floating-card div {
+
+
+width:220px;
+
+
+padding:25px;
+
+
+text-align:center;
+
+
+background:
+rgba(255,255,255,.08);
+
+
+border:
+1px solid rgba(255,255,255,.15);
+
+
+border-radius:20px;
+
+
+backdrop-filter:blur(20px);
+
+
+animation:
+float 5s infinite;
+
+
+transition:.5s;
+
+
+}
+
+
+
+.floating-card div:hover {
+
+
+transform:
+translateY(-15px)
+rotateY(15deg);
+
+
+box-shadow:
+0 0 40px #00eaff;
+
+
+}
+
+
+
+
+@keyframes float {
+
+
+0%,100%{
+transform:translateY(0);
+}
+
+
+50%{
+transform:translateY(-20px);
+}
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+ GENERAL SECTIONS
+================================ */
+
+
+
+section {
+
+
+min-height:80vh;
+
+
+padding:100px 10%;
+
+
+}
+
+
+
+section h2 {
+
+
+font-size:50px;
+
+
+margin-bottom:50px;
+
+
+}
+
+
+
+
+
+/* ===============================
+ GLASS CARDS
+================================ */
+
+
+.glass {
+
+
+max-width:900px;
+
+
+padding:40px;
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+border-radius:30px;
+
+
+border:
+1px solid rgba(255,255,255,.15);
+
+
+backdrop-filter:
+blur(20px);
+
+
+font-size:20px;
+
+
+line-height:1.8;
+
+
+transition:.5s;
+
+
+}
+
+
+
+.glass:hover {
+
+
+transform:
+translateY(-10px);
+
+
+box-shadow:
+
+0 0 50px rgba(0,234,255,.25);
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+ SKILLS
+================================ */
+
+
+
+.skills {
+
+
+display:grid;
+
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+
+gap:30px;
+
+
+}
+
+
+
+.skills div {
+
+
+padding:35px;
+
+
+border-radius:25px;
+
+
+background:
+
+rgba(255,255,255,.07);
+
+
+border:
+1px solid rgba(255,255,255,.15);
+
+
+font-size:25px;
+
+
+transition:.4s;
+
+
+}
+
+
+
+.skills span {
+
+
+display:block;
+
+
+font-size:15px;
+
+color:#cbd5e1;
+
+
+margin-top:15px;
+
+
+}
+
+
+
+.skills div:hover {
+
+
+transform:
+translateY(-15px);
+
+
+background:
+
+rgba(0,234,255,.15);
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+ PROJECT HORIZONTAL CAROUSEL
+================================ */
+
+
+
+.slider {
+
+
+display:flex;
+
+
+gap:40px;
+
+
+overflow-x:auto;
+
+
+padding-bottom:40px;
+
+
+scroll-snap-type:x mandatory;
+
+
+}
+
+
+
+.slider::-webkit-scrollbar {
+
+
+height:8px;
+
+
+}
+
+
+
+
+.project {
+
+
+min-width:350px;
+
+
+height:300px;
+
+
+padding:40px;
+
+
+border-radius:30px;
+
+
+background:
+
+linear-gradient(
+145deg,
+rgba(255,255,255,.12),
+rgba(255,255,255,.03)
+);
+
+
+
+border:
+1px solid rgba(255,255,255,.15);
+
+
+
+scroll-snap-align:center;
+
+
+transition:.5s;
+
+
+}
+
+
+
+.project:hover {
+
+
+transform:
+
+scale(1.08)
+rotateY(8deg);
+
+
+box-shadow:
+
+0 0 60px rgba(0,234,255,.4);
+
+
+}
+
+
+
+.project h3 {
+
+
+font-size:30px;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+.project p {
+
+line-height:1.7;
+
+color:#cbd5e1;
+
+}
+
+
+
+
+
+
+/* ===============================
+ IMPACT CARDS
+================================ */
+
+
+.cards {
+
+
+display:flex;
+
+
+gap:30px;
+
+
+flex-wrap:wrap;
+
+
+}
+
+
+.cards div {
+
+
+padding:40px;
+
+
+border-radius:25px;
+
+
+background:
+rgba(255,255,255,.08);
+
+
+font-size:25px;
+
+
+flex:1;
+
+
+min-width:250px;
+
+
+text-align:center;
+
+
+transition:.4s;
+
+
+}
+
+
+
+.cards div:hover {
+
+
+transform:
+translateY(-20px);
+
+
+box-shadow:
+0 0 40px #9b7bff;
+
+
+}
+
+
+
+
+
+
+/* ===============================
+ CONTACT
+================================ */
+
+
+#contact {
+
+
+text-align:center;
+
+
+}
+
+
+
+#contact p {
+
+
+font-size:25px;
+
+
+color:#00eaff;
+
+
+}
+
+
+
+
+
+/* ===============================
+ MOBILE DESIGN
+================================ */
+
+
+@media(max-width:900px){
+
+
+.hero {
+
+
+flex-direction:column;
+
+
+text-align:center;
+
+
+}
+
+
+
+.hero h1 {
+
+
+font-size:55px;
+
+
+}
+
+
+
+nav {
+
+
+width:95%;
+
+
+}
+
+
+
+nav a {
+
+
+display:none;
+
+
+}
+
+
+}
