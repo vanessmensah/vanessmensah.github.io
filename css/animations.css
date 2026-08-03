@@ -1,0 +1,316 @@
+/* ==========================================
+   PROJECT INSIGHT
+   VANESS MENSAH PORTFOLIO V2.0
+
+   PROFESSIONAL ANIMATION SYSTEM
+========================================== */
+
+
+
+/* ==========================
+   REVEAL ANIMATIONS
+========================== */
+
+
+.reveal {
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   STAGGER EFFECT
+========================== */
+
+
+.stagger > * {
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+
+}
+
+
+
+.stagger.visible > *:nth-child(1){
+
+    transition-delay:.1s;
+
+}
+
+
+
+.stagger.visible > *:nth-child(2){
+
+    transition-delay:.2s;
+
+}
+
+
+
+.stagger.visible > *:nth-child(3){
+
+    transition-delay:.3s;
+
+}
+
+
+
+.stagger.visible > *:nth-child(4){
+
+    transition-delay:.4s;
+
+}
+
+
+
+.stagger.visible > * {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   CARD HOVER
+========================== */
+
+
+.card,
+.project-card,
+.timeline-card {
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+
+.card:hover,
+.project-card:hover,
+.timeline-card:hover {
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   BUTTON MOTION
+========================== */
+
+
+.primary-btn,
+.secondary-btn,
+.contact-buttons a {
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.primary-btn::before,
+.secondary-btn::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.15);
+
+    transform:translateX(-100%);
+
+    transition:.4s;
+
+}
+
+
+
+.primary-btn:hover::before,
+.secondary-btn:hover::before {
+
+    transform:translateX(0);
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   SIDEBAR HIGHLIGHT
+========================== */
+
+
+.sidebar-nav a {
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+
+}
+
+
+
+.sidebar-nav a:hover {
+
+    transform:translateX(5px);
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   IMAGE HOVER
+========================== */
+
+
+.project-card img {
+
+    transition:
+        transform .5s ease;
+
+}
+
+
+
+.project-card:hover img {
+
+    transform:scale(1.03);
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   HIGHLIGHT SLIDER
+========================== */
+
+
+.highlight {
+
+    animation:
+        fadeHighlight .5s ease;
+
+}
+
+
+
+@keyframes fadeHighlight {
+
+
+from {
+
+    opacity:0;
+
+    transform:translateY(10px);
+
+}
+
+
+
+to {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   MOBILE DRAWER
+========================== */
+
+
+.sidebar {
+
+    transition:
+        left .35s ease;
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   ACCESSIBILITY
+========================== */
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+*,
+*::before,
+*::after {
+
+
+    animation-duration:.01ms !important;
+
+    animation-iteration-count:1 !important;
+
+    transition-duration:.01ms !important;
+
+    scroll-behavior:auto !important;
+
+
+}
+
+
+
+}
